@@ -1,0 +1,72 @@
+body {
+	background-image: url("../img/bg.png");
+	background-repeat: all;
+	background-color: black;
+	color: #E1E1E1;
+}
+.homeautoCtrls {
+	display: inline;
+	list-style: none;
+}
+.homeautoCtrls li a {
+	display: inline;
+	float: left;
+	height: 22px;
+	margin-right: 40px;
+	padding: 5px 0 5px 10px;
+}
+
+.round-button {
+    display:block;
+    position: relative;
+    width:50px;
+    height:50px;
+    line-height: 600%;
+    border: 1px solid #f5f5f5;
+    border-radius: 50%;
+    color:#F1F1F1;
+    text-align: center;
+    text-decoration:none;
+    background: #464646;
+    box-shadow: 0 0 3px gray;
+    font-size:20px;
+    font-weight:bold;
+    text-align: center;
+}
+.round-button label {
+	font-size: 12px;
+	color: #BBB;
+}
+.activeBtn {
+	background: #FF0245; 
+}
+.round-button:hover {
+    background: #262626;
+}
+
+#waterTankLevel img{
+	display: block;
+	margin-right: auto;
+    margin-left: auto;
+}
+
+.tankLevel {
+	position: relative;
+	color: #333;
+	font-size: 32px;
+	top: -60px;
+	left: -20px;
+}
+
+#sensorData {
+	margin-top: 5%;
+	color: #A3A3A3;
+}
+#dataID {
+	border: solid;
+	border-right: 5px solid;
+	border-top: none;
+	border-bottom: none;
+	border-left: none;
+	border-color: #2244F1;
+}

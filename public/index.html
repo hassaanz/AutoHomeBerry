@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project Title</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/project.css">
+	<script src="/socket.io/socket.io.js"</script>
+	<script type="text/javascript" src='javascripts/jquery.js'></script>
+	<script type="text/javascript" src="javascripts/bootstrap.js"></script>
+	<script type="text/javascript" src="javascripts/sockets.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="page-header text-center">
+				<h1>Home Automation System <small>Final year project</small></h1>
+			</div>
+			<div class="row">
+				<div class="col-md-6 text-center">
+					<h2>Camera Feed</h2>
+					<img src="images/photo-camera-512.png" width="320" height="240" HEI class="img-thumbnail center-block">
+					<!-- <video src="http://localhost:8888/movie.mp4" width="320" height="320"></video> -->
+				</div>
+				<div class="col-md-6 text-center" id="watertank">
+					<h2>Water Tank Level</h2>
+					<div id="waterTankLevel">
+						<img src="img/waterTank.png" width="320" height="240" class="img-thumbnail center-block">
+					</div>
+					<span class="tankLevel">100%</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 center-block">
+					<ul class="homeautoCtrls">
+						<li>
+							<a href="#">
+								<div class="round-button"><label>Light1</label></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="round-button"><label>Fan</label></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="round-button"><label>Light2</label></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="round-button"><label>Light3</label></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="round-button activeBtn"><label>Light3</label></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="round-button activeBtn"><label>Light4</label></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="round-button activeBtn"><label>Light5</label></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="round-button"><label>Light1</label></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="round-button"><label>Fan</label></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="round-button activeBtn"><label>Light5</label></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="round-button"><label>Light1</label></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row" id="sensorData">
+				<div class="col-md-3 col-md-offset-4" id="dataID">
+					<h3>Temperature</h3>
+					<h3>Humidity</h3>
+				</div>
+				<div class="col-md-3">
+					<h3>100 F</h3>
+					<h3>250 Bar</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
