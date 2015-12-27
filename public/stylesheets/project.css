@@ -4,16 +4,22 @@ body {
 	background-color: black;
 	color: #E1E1E1;
 }
+.gpioControls {
+	display: table;
+	margin: 0 auto;
+}
 .homeautoCtrls {
 	display: inline;
+	min-width: 696px;
 	list-style: none;
 }
-.homeautoCtrls li a {
+.homeautoCtrls li {
 	display: inline;
 	float: left;
 	height: 22px;
 	margin-right: 40px;
 	padding: 5px 0 5px 10px;
+	margin-bottom: 20px;
 }
 
 .round-button {
@@ -38,7 +44,7 @@ body {
 	color: #BBB;
 }
 .activeBtn {
-	background: #FF0245; 
+	background: #FF0245;
 }
 .round-button:hover {
     background: #262626;

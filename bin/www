@@ -5,12 +5,16 @@
  */
 
 var app = require('../app');
+var socketIO = require('socket.io');
 var debug = require('debug')('server:server');
 var http = require('http');
+var path = require('path');
 
-var socketIOHandler = require('../lib/socketIOHandler');
-var camRecord = require('../lib/camRecord');
+var socketIOHandler = require(path.resolve(__dirname + '/../lib/socketioHandler'));
+var camRecord = require(path.resolve(__dirname + '/../lib/camRecord'));
 
+
+var usecamera = false;
 /**
  * Get port from environment and store in Express.
  */
@@ -97,11 +101,13 @@ function onListening() {
 	? 'pipe ' + addr
 	: 'port ' + addr.port;
 	debug('Listening on ' + bind);
-	camRecord.start(function(err, res) {
-		if (err) {
-		  console.log(err);
-		  process.exit(-1);
-		}
-		console.log(res);
-	});
+	if (usecamera) {
+		camRecord.start(function(err, res) {
+			if (err) {
+			  console.log(err);
+			  process.exit(-1);
+			}
+			console.log(res);
+		});
+	}
 }
